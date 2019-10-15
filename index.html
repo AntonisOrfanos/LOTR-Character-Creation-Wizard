@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Crimson+Text|Gloria+Hallelujah|Indie+Flower|Shadows+Into+Light|Yatra+One" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>LOTR Character Creation App</title>
+</head>
+<body>
+
+    <div id="app">
+        <header>
+            <h1 id="app-title">Character Creation</h1>
+        </header>
+        <aside id="cultures">
+            <h2>Cultures</h2>
+            <div v-for="culture in cultures" class="culture">
+                <img v-bind:src="culture.img" />
+                <button v-on:click="selected_culture = culture" 
+                        v-bind:class="{ selected_culture: selected_culture == culture}"     
+                        v-bind:title="culture.moto">
+                    {{ culture.name }}
+                </button>
+            </div>
+        </aside>
+        
+        <article id="culture-details" v-show="Object.keys(selected_culture).length !== 0">
+            <h2>{{selected_culture.name}}</h2>
+            <h5>{{selected_culture.moto}}</h5>
+            <p v-html="selected_culture.desc"></p>
+
+            <div id="background-details">
+                <h2>Backgrounds</h2>
+                <div v-for="bg in selected_culture.backgrounds" class="culture_background">
+                    <h3>{{bg.short_desc}}</h3>
+                    <p>{{bg.desc}}</p>
+                </div>
+            </div>
+        </article>
+
+    </div>
+    <script src="./init.js"></script>
+    <script src="./dunlendings-data.js"></script>
+    <script src="./rohirim-data.js"></script>
+    <script src="cultures.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

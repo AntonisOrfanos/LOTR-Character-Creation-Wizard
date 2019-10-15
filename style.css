@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#colors {
+    color: #BFB8B4;
+    color: #7F7B78;
+    color: #FFF5F1;
+    color: #403E3C;
+    color: #E5DDD9;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    background-size: 100%;
+    background-image: url("./img/sand_tile_1000.jpg");
+    /* background-color: burlywood; */
+}
+* {
+    box-sizing: border-box;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.3); 
+    border: 0;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /* border-radius: 3px; */
+    background: #888; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+header {
+    width: calc(100% - 1px);
+    height: 30vh;
+    background-image: url("./img/Banner2.png");
+    background-size: cover;
+    background-position: center;
+}
+#app {
+    background: #FFF5F1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    color: #222;
+    font-family: 'Alegreya', serif;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Yatra One', cursive;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Yatra One', cursive;
+    text-align: center;
+    color: #403E3C;
+}
+
+#app h1#app-title {
+    position: absolute;
+    top: 12vh;
+    left: calc(50% - 200px);
+    margin: 0 auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.75);
+    color: #eee;
+    border-radius: 5px;
+    padding: 8px 0 2px 0;
+}
+#app #cultures {
+    /* border: 12px solid rgba(0,0,0,0.5); */
+    /* box-shadow: rgba(255,255,255,0.3) inset 0px -30px 60px; */
+    /* border-bottom: 5px solid rgba(255,255,255,0.3); */
+    vertical-align: top;
+    text-align: center;
+    width: 300px;
+    height: calc(100vh - 300px);
+    height: 70vh;
+    display: inline-block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* background-color: rgba(0,0,0,0.15); */
+    background-color: #BFB8B4;
+}
+#app #cultures:focus {
+    outline: 0;
+}
+#app #culture-details {
+    padding: 0 10px;
+    height: calc(100vh - 300px);
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 895px;
+    width: calc(100% - 305px);
+    vertical-align: top;
+    display: inline-block;
+}
+.culture {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    text-align: inherit;
+    margin: 20px;
+}
+.culture img, .culture button{
+    position: absolute;
+    top: 0; 
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    outline: none;
+}
+.culture img {
+    background-image: url("./img/sand_tile_300.jpg");
+}
+.culture button {
+    font-family: inherit;
+    border: 2px solid #333;
+    background-color: rgba(0,0,0,0.9);
+    color: #aaa;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.culture button.selected_culture {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+}
+.culture button:focus,
+.culture button:hover {
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+#background-details {
+    text-align: center;
+}
+.culture_background {
+    vertical-align: top;
+    width: 240px;
+    display: inline-block;
+    margin: 0 20px;
+    text-align: left;
+}

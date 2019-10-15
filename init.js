@@ -1,0 +1,1 @@
+const img_folder = "./img/"
